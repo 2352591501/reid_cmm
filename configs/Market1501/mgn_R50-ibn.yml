@@ -1,0 +1,21 @@
+_BASE_: ../Base-MGN.yml
+
+DATALOADER:
+  BiMOD_BICAMERA_WAY: True
+  ONLY_VISIBLE: False
+  ONLY_INFRAD: False
+
+
+MODEL:
+  BACKBONE:
+    WITH_IBN: True
+
+  LOSSES:
+    NAME: ('CE', 'Tri') #'CE','Tri','MCNL','GSL',
+
+DATASETS:
+  NAMES: ("RegDB_01",)
+  TESTS: ("RegDB_01",)
+
+
+OUTPUT_DIR: logs/SYSU_MM01/mgn_R50-ibn_mcnl

@@ -1,0 +1,8 @@
+_BASE_: ../Base-AGW.yml
+
+DATASETS:
+  NAMES: ("MSMT17",)
+  TESTS: ("MSMT17",)
+  NUM_CAMERAS: 12
+
+OUTPUT_DIR: logs/msmt17/loss/baseline+CaCE+

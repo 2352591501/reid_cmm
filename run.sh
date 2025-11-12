@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python3 tools/train_net.py --config-file /home/amax/zn/fast-reid-orig/configs/Market1501/AGW_R50.yml

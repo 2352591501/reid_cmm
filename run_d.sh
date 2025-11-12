@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=1 python tools/visu.py --config-file /home/amax/fast-reid-orig/configs/Market1501/AGW_R50.yml

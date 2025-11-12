@@ -1,0 +1,11 @@
+_BASE_: ../Base-SBS.yml
+
+MODEL:
+  BACKBONE:
+    WITH_IBN: True
+
+DATASETS:
+  NAMES: ("SYSU_MM01",)
+  TESTS: ("SYSU_MM01",)
+
+OUTPUT_DIR: logs/market1501/sbs_R50-ibn

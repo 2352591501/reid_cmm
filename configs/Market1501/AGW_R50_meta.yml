@@ -1,0 +1,10 @@
+_BASE_: ../Base-AGW_meta.yml
+
+DATASETS:
+  NAMES: ("Market1501",)
+  TESTS: ("Market1501",)
+MODEL:
+  HEADS:
+    FORWARD: False
+    CAMERA_HEAD: simple
+OUTPUT_DIR: logs/market1501_sct/test

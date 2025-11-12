@@ -1,0 +1,25 @@
+_BASE_: ../Base-AGW.yml
+
+DATASETS:
+
+  NAMES: ("RegDB_01",)
+  TESTS: ("RegDB_01",)
+
+DATALOADER:
+  BiMOD_BICAMERA_WAY: True
+#'MNCL', 'mask_ce', 'sce', 'feat_dis'
+MODEL:
+  LOSSES: 
+    NAME: ('CE', 'MNCL', 'mask_ce', 'sce', 'feat_dis')
+  HEADS:
+    CLS_LAYER: 'DUAL'
+    NUM_CLASSES: [206, 206]
+  # BACKBONE:
+  #   PRETRAIN_PATH: '/home/amax/zn/fast-reid-orig/logs/RegDB/new/all_4/model_final.pth'
+
+SOLVER:
+  PARSING_LR_FACTOR: 1.
+
+OUTPUT_DIR: logs/RegDB/m1m2
+# AR: adaptive residual layer in 3*3
+#CE: channal exchange

@@ -1,0 +1,24 @@
+_BASE_: ../Base-AGW.yml
+
+
+DATASETS:
+  NAMES: ("DukeMTMC",)
+  TESTS: ("DukeMTMC",)
+  NUM_CAMERAS: 8
+MODEL:
+  BACKBONE:
+    META: False
+  HEADS:
+    FORWARD: False
+    CAMERA_HEAD: simple
+  Transformer:
+    num_patch: 12
+  LOSSES:
+    NAME: ('CE', 'MCNL','PRE') #'CE','Tri','MCNL','GSL',
+
+DATALOADER:
+  NUM_ID: 8
+
+
+
+OUTPUT_DIR: logs/dukemtmc/test
